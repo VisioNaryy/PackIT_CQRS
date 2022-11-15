@@ -2,11 +2,11 @@
 
 namespace PackIT.Domain.ValueObjects;
 
-public class PackingItem
+public record PackingItem
 {
-    public string Name { get; set; }
+    public string Name { get; init; }
     public uint Quantity { get; set; }
-    public bool IsPacked { get; set; }
+    public bool IsPacked { get; init; }
 
     public PackingItem(string name, uint quantity, bool isPacked)
     {
