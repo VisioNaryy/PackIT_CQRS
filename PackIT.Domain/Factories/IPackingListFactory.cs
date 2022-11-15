@@ -7,5 +7,6 @@ namespace PackIT.Domain.Factories;
 public interface IPackingListFactory
 {
     PackingList Create(PackingListId id, PackingListName name, Localization localization);
-    PackingList CreateWithDefaultItems(PackingListId id, PackingListName name, TravelDays days, Temperature temperature, Gender gender);
+    PackingList CreateWithDefaultItems(PackingListId id, PackingListName name, TravelDays days,
+        Temperature temperature, Gender gender, Localization localization);
 }
