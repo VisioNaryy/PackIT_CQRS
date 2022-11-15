@@ -15,4 +15,8 @@
       <Folder Include="Controllers" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\PackIT.Application\PackIT.Application.csproj" />
+    </ItemGroup>
+
 </Project>
