@@ -1,0 +1,19 @@
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using PackIT.Infrastructure.EF;
+using PackIT.Infrastructure.EF.Options;
+using PackIT.Shared.Options;
+using PackIT.Shared.Queries;
+
+namespace PackIT.Infrastructure;
+
+public static class Extensions
+{
+    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddSqlServerConnection(configuration);
+        services.AddQueries();
+        
+        return services;
+    }
+}

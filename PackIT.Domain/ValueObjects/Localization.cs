@@ -9,5 +9,5 @@ public record Localization(string City, string Country)
         return new Localization(splitLocalization.First(), splitLocalization.Last());
     }
 
-    public override string ToString() => $"{City} {Country}";
+    public override string ToString() => $"{City},{Country}";
 }

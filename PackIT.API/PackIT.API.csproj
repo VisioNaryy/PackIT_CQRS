@@ -17,6 +17,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\PackIT.Application\PackIT.Application.csproj" />
+      <ProjectReference Include="..\PackIT.Infrastructure\PackIT.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

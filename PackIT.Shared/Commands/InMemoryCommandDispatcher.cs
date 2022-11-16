@@ -5,16 +5,16 @@ namespace PackIT.Shared.Commands;
 
 internal sealed class InMemoryCommandDispatcher : ICommandDispatcher
 {
-    private readonly IServiceProvider _provider;
+    private readonly IServiceProvider _serviceProvider;
 
-    public InMemoryCommandDispatcher(IServiceProvider provider)
+    public InMemoryCommandDispatcher(IServiceProvider serviceProvider)
     {
-        _provider = provider;
+        _serviceProvider = serviceProvider;
     }
     
     public async Task DispatchAsync<TCommand>(TCommand command) where TCommand : class, ICommand
     {
-        using var scope = _provider.CreateScope();
+        using var scope = _serviceProvider.CreateScope();
         var handler = scope.ServiceProvider.GetRequiredService<ICommandHandler<TCommand>>();
 
         await handler.HandleAsync(command);

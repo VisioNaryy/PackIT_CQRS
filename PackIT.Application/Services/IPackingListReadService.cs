@@ -1,4 +1,6 @@
-﻿namespace PackIT.Application.Services;
+﻿using PackIT.Application.DTO;
+
+namespace PackIT.Application.Services;
 
 public interface IPackingListReadService
 {
