@@ -1,5 +1,6 @@
 using PackIT.Application;
 using PackIT.Infrastructure;
+using PackIT.Infrastructure.EF.Queries;
 
 var builder = WebApplication.CreateBuilder(args);
 

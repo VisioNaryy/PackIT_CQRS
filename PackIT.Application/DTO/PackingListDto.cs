@@ -2,4 +2,4 @@
 
 namespace PackIT.Application.DTO;
 
-public record PackingListDto(Guid Id, string Name, Localization Localization, IEnumerable<PackingItemDto> Items);
+public record PackingListDto(Guid Id, string Name, LocalizationDto Localization, IEnumerable<PackingItemDto> Items);
